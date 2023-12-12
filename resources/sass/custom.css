@@ -1,0 +1,359 @@
+.filter-dropdown{
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+.sub-title{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.sub-title-inner-width{
+ width: 90%;
+}
+
+.tab-inner-width{
+ width: 20%;
+}
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    display: flex;
+}
+
+/* Style the buttons inside the tab */
+.tab .tablinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+
+}
+
+/* Change background color of buttons on hover */
+.tab .tablinks:hover {
+    border: 1px solid #6899d2;
+}
+
+/* Create an active/current tablink class */
+.tab .tablinks.active {
+    border: 2px solid #6899d2;
+}
+
+/* Style the tab content */
+.tabcontent {
+  border-top: none;
+}
+.tabcontent-2{
+    display: none;
+}
+
+/* Card Section */
+
+.card{
+    width: 90%;
+    height: 400px;
+}
+
+.card-header{
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+}
+
+.card-header img{
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    background-color: #0b1c35;
+    transition: .8s ease-in-out;
+    cursor: pointer;
+}
+
+.default-photo-bg{
+    background-color: #e7e7e7 !important;
+}
+.card-header img:hover{
+    transform: scale(1.2);
+   
+}
+
+.card-header i{
+    position: absolute;
+    top:20px;
+    right: 22px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* .card-body{
+    border:1px solid red;
+    height: 300px;
+} */
+.fa-heart{
+    color: rgb(255, 255, 255);
+}
+
+.product-title{
+    font-size: 16px;
+    font-weight: 600;
+    /* line-height: 5px !important; */
+}
+
+
+
+.price{
+    font-size: 15px;
+}
+
+.ads{
+    height: 200px;
+    border-radius: 10px;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000046, #1CB5E0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000046, #1CB5E0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
+}
+.ads-title-inner{
+    height: inherit;
+}
+
+.ads-img-section{
+    height: inherit;
+    width: 400px;
+    height:150px;
+    background-color: #000046;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ads-img-section .image-box{
+    /* border:1px solid red; */
+    width: 60%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ads-img-section .image-box img{
+    width: 200px;
+    height: 100px;
+}
+
+.bank-info{
+    display: block;
+    width: 50%;
+
+}
+
+.bank-info-img{
+    width: 80px;
+}
+
+
+@media screen and (max-width: 991px) {
+    .sub-title-inner-width{
+        width: 60%;
+    }
+    .tab-inner-width{
+        width: 100%;
+    }
+    .tab .tablinks {
+        width: 100px;
+        height: 20px;
+ 
+    }
+    .tab .tablinks:nth-child(2) {
+        width: 100px;
+        height: 20px;
+        margin-left: 8px;
+    }
+
+    .card{
+        width: 95%;
+        height: 100%;
+   }
+
+    .card-header{
+        position: relative;
+        height: 300px !important;
+    }
+
+    .card-header img{
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+
+    .card-header i{
+        position: absolute;
+        top:10px;
+        right: 12px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .my-cart{
+        border-radius: 50px;
+        width:40px;
+        height:40px;
+        background-color:#0b1c35;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+    }
+
+    .fa-shopping-cart{
+        font-size: 15px;
+    }
+
+    .fa-heart{
+         color: rgb(255, 255, 255);
+    }
+
+
+    .card-body h4{
+        font-size: 15px;
+    }
+
+    .card-height{
+        height: 300px;
+    }
+
+    .ads{
+        height: 200px;
+        border-radius: 10px;
+        background: #000046;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #000046, #1CB5E0);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #000046, #1CB5E0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        overflow: hidden;
+    }
+    .ads-title-inner{
+        height: inherit;
+    }
+
+    .ads-img-section{
+        height: inherit;
+        width: 300px;
+        height:150px;
+        background-color: #000046;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .ads-img-section .image-box{
+        /* border:1px solid red; */
+        width: 60%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ads-img-section .image-box img{
+        width: 200px;
+        height: 100px;
+    }
+
+    .bank-info{
+        display: block;
+        width: 50%;
+
+    }
+
+    .bank-info-img{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 547px) {
+    .my-cart{
+        border-radius: 50px;
+        width:30px;
+        height:30px;
+        background-color:#0b1c35;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+    }
+
+    .fa-shopping-cart{
+        font-size: 12.2px;
+    }
+    .fa-heart{
+        font-size: 20px !important;
+    }
+    .product-title{
+        font-size: 12.2px;
+        line-height: 22px;
+    }
+
+    .card-height{
+        height: 200px;
+    }
+    .ads{
+        height: 100px;
+        border-radius: 10px;
+        background: #000046;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #000046, #1CB5E0);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #000046, #1CB5E0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        overflow: hidden;
+    }
+    .ads-title-inner h1{
+        font-size: 12px;
+    }
+
+    .ads-img-section{
+        height: inherit;
+        width: 150px;
+        height:60px;
+        background-color: #000046;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .ads-img-section .image-box{
+        /* border:1px solid red; */
+        width: 60%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ads-img-section .image-box img{
+        width: 60px;
+        height: 40px;
+    }
+
+    .bank-info{
+        display: block;
+        width: 100%;
+
+    }
+
+    .bank-info-img{
+        width: 40px;
+    }
+}
