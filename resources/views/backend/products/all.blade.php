@@ -67,7 +67,7 @@
                     img=img.replace(':img', data);
                     return img;
                 }
-            
+
               },
               { data: 'price' },
               {
@@ -78,10 +78,10 @@
                     }else{
                         var stock = `<span class="badge badge-danger">Out Of Stock</span>`;
                     }
-        
+
                     return  stock;
                 }
-            
+
                },
               {data: 'count'},
               {
@@ -96,7 +96,7 @@
                                  @method('DELETE')
                                  <button type="button" class="btn btn-danger btn-sm" onclick="DeleteProduct(this)"><i class="fa fa-trash"></i></button>
                               </form>`;
-                  
+
                     edit=edit.replace(':id', data);
                     del=del.replace(':delete', data);
                     return  `
@@ -128,9 +128,9 @@
                   'targets': [7],
                   'orderable': false,
                    'visible': false,
-                   'searchable': false,  
+                   'searchable': false,
               },
-            
+
           ],
           language: {
               "search" : '<i class="fas fa-search"></i>',

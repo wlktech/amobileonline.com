@@ -16,10 +16,10 @@ class ProductController extends Controller
     use UserRole, FileUpload;
     public function index()
     {
-        // if($this->isSuperAdmin() || $this->isStaff()){
+        if($this->isSuperAdmin() || $this->isStaff()){
             $products = Product::with('getProductPhotos')->latest()->paginate(50);
             return view('backend.products.all',compact('products'));
-        // }
+        }
     }
 
     public function get_all_products_datatable(Request $request)

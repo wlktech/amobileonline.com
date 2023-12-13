@@ -7,7 +7,7 @@
       }
     }
   @endphp
-  
+
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary sidebar-bg elevation-4">
     <!-- Brand Logo -->
@@ -39,7 +39,7 @@
             </li>
             <li class="nav-item">
               <a href="{{ route('store_admin.users.list')}}" class="nav-link">
-         
+
               <i class="nav-icon fas fa-users"></i>
                 <p>
                   Users
@@ -69,10 +69,10 @@
                     <p>Admin List</p>
                   </a>
                 </li>
-               
+
               </ul>
             </li>
-            
+
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-tree"></i>
@@ -167,7 +167,7 @@
                 </li>
               </ul>
             </li>
-  
+
             <li href="#" class="nav-link text-center">
               <div>
                   <a class="dropdown-item" href="{{ route('logout') }}"

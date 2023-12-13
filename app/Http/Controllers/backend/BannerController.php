@@ -17,44 +17,44 @@ class BannerController extends Controller
 
     public function index()
     {
-        if($this->isSuperAdmin()){
+        // if($this->isSuperAdmin()){
             $banner = Banner::latest()->paginate(4);
             return view('backend.banner.lists',compact('banner'));
-        }
-        
+        // }
+
     }
 
 
     public function all_ads()
     {
-        if($this->isSuperAdmin()){
+        // if($this->isSuperAdmin()){
             $ads = Ads::latest()->paginate(4);
             return view('backend.banner.ads_list',compact('ads'));
-        }
+        // }
     }
 
     public function edit_ads($id)
     {
-        if($this->isSuperAdmin()){
+        // if($this->isSuperAdmin()){
             $ads = Ads::findOrFail($id);
              return view('backend.banner.ads_edit',compact('ads'));
-        }
+        // }
     }
 
-    
+
     public function create()
     {
-        if($this->isSuperAdmin()){
+        // if($this->isSuperAdmin()){
             return view('backend.banner.create');
-        }
-        
+        // }
+
     }
 
     public function create_ads()
     {
-        if($this->isSuperAdmin() || $this->isStaff()){
+        // if($this->isSuperAdmin() || $this->isStaff()){
             return view('backend.banner.create_ads');
-        }
+        // }
     }
 
     public function ads_store(Request $request)
@@ -77,7 +77,7 @@ class BannerController extends Controller
         $request->validate([
             'file' => 'required|dimensions:min_width=1810,min_height=184',
         ]);
-        if($this->isSuperAdmin()){
+        // if($this->isSuperAdmin()){
             $ads = Ads::findOrFail($id);
             $file = $request->file('file');
             if($file){
@@ -86,16 +86,16 @@ class BannerController extends Controller
                 }
 
                 $newFileName = uniqid() . '.' . $file->getClientOriginalExtension();
-                $file->move(public_path('images/banner/'), $newFileName); 
+                $file->move(public_path('images/banner/'), $newFileName);
                 $ads->image = 'images/banner/' . $newFileName;
                 $ads->page = $request->page;
                 $ads->update();
-     
+
             }
 
             Session::flash('message', 'Ads was updated successfully');
            return redirect('store-admin/ads/all');
-        }
+        // }
     }
 
     public function store(Request $request)
@@ -108,12 +108,12 @@ class BannerController extends Controller
         $banner->save();
         Session::flash('message', 'Banner was created successfully');
         return redirect('store-admin/banner/all');
-        
+
     }
 
     public function edit($id)
     {
-        
+
         if($this->isSuperAdmin()){
             $banner = Banner::findOrFail($id);
              return view('backend.banner.edit',compact('banner'));
@@ -122,7 +122,7 @@ class BannerController extends Controller
 
     public function update(Request $request,$id)
     {
-        
+
         $banner = Banner::findOrFail($id);
         $file = $request->file('file');
         if($file){
@@ -131,15 +131,15 @@ class BannerController extends Controller
             }
 
             $newFileName = uniqid() . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('images/banner/'), $newFileName); 
+            $file->move(public_path('images/banner/'), $newFileName);
             $banner->image = 'images/banner/' . $newFileName;
             $banner->update();
-     
+
         }
 
         Session::flash('message', 'Banner was updated successfully');
         return redirect('store-admin/banner/all');
-        
+
     }
 
     public function delete($id)
@@ -154,7 +154,7 @@ class BannerController extends Controller
         Session::flash('message', 'Banner was deleted successfully');
 
         return redirect()->back();
-         
+
     }
     public function delete_ads($id)
     {
@@ -167,6 +167,6 @@ class BannerController extends Controller
         }
         Session::flash('message', 'Ads was deleted successfully');
         return redirect()->back();
-         
+
     }
 }
